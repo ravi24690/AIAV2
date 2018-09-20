@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="0194eab9-9ea2-4a0b-9ecf-e35f08ecd61d">
+   <signature appVersion="3.1.2" lastUpdatedOn="20/09/2018 13:25:46 +0530"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/DBUpdate_Claim_UPDATE.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/Claim.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="2048445892" elementPath="/root/DATE_TIME_PROCESSED/">
+         <dmlExpression><![CDATA[formatString ( getDateAndTime (  ) ,"MM/DD/YYYY" ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1248313977" elementPath="/root/PROVIDER_CODE/">
+         <dmlExpression><![CDATA[trimString ( in:\ProviderCode\Code, "Provider Code: " ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1724560135" elementPath="/root/INVOICE_DATE/">
+         <dmlExpression><![CDATA[in:\Claim[ %i_InvoiceCounter ]\InvoiceDate]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1399668646" elementPath="/root/">
+         <dmlExpression><![CDATA[1 times]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="39401326" elementPath="/root/CLAIM/">
+         <dmlExpression><![CDATA[addTrace ( "INFO", "Abhishek" + %flag ) ;
+
+if %flag = 0
+then
+"Failed: Mandatory field missing"
+else
+"Passed"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-83701388" elementPath="/root/INVOICE_NUMBER/">
+         <dmlExpression><![CDATA[in:\Claim[ %i_InvoiceCounter ]\InvoiceNumber]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-128784832" elementPath="/root/CLAIM_FILENAME/">
+         <dmlExpression><![CDATA[%s_FileName:=getAttribute ( "B2BXGIReceiveInfo" );
+%start_pos:=index ( %s_FileName, "ConsumptionFileName" ) ;
+%end_pos:=index ( %s_FileName, "ConsumptionFileNameExtension" ) ;
+getSubString ( %s_FileName, %start_pos+22,%end_pos-5-%start_pos-29)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1525806256" elementPath="/root/PROVIDER_NAME/">
+         <dmlExpression><![CDATA[trimString ( in:\ProviderName\Name, "Provider Name: " ) ]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

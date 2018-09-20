@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="9e8059a1-bbe8-4e1f-bdab-118b16c49131">
+   <signature appVersion="3.1.2" lastUpdatedOn="19/09/2018 20:33:26 +0530"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/DBLoggingImage_INSERT.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ReadImage.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="427031894" elementPath="/root/IMAGE/">
+         <dmlExpression><![CDATA["Found"
+]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-642463349" elementPath="/root/">
+         <dmlExpression><![CDATA[1 times]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="317786876" elementPath="/root/INVOICE_NUMBER/">
+         <dmlExpression><![CDATA[in:\Root\FileName]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

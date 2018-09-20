@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseMap xmlns="http://www.axway.com/mappingServices/databaseMap" databaseHost="10.151.14.55" type="INSERT" databasePort="1521" databaseName="10.151.14.55:1521:orcl" databaseType="Oracle" id="1ac0ed24-fa03-431d-9c6d-f48abff5545d">
+   <signature appVersion="3.1.2" lastUpdatedOn="18/09/2018 19:09:24 +0530"/>
+   <outputBusinessDocument/>
+   <expression><![CDATA[insert into "RECONILIATION_REPORT" values (
+#CLAIM_FILENAME#, 
+#DATE_TIME_PROCESSED#, 
+#INVOICE_NUMBER#, 
+#INVOICE_DATE#, 
+#GL_NO#, 
+#CLAIM#, 
+#DIAGNOSIS#, 
+#DETAILS#, 
+#IMAGE#, 
+#OVERALL_STATUS#, 
+#PROVIDER_NAME#, 
+#PROVIDER_CODE#)]]></expression>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/DBLoggingClaim_INSERT.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mappings>
+      <mapping endPosition="232">
+         <inputMapElements>
+            <inputMapElement tableName="RECONILIATION_REPORT" columnName="CLAIM_FILENAME" elementPath="/root/CLAIM_FILENAME/"/>
+            <inputMapElement tableName="RECONILIATION_REPORT" columnName="DATE_TIME_PROCESSED" elementPath="/root/DATE_TIME_PROCESSED/"/>
+            <inputMapElement tableName="RECONILIATION_REPORT" columnName="INVOICE_NUMBER" elementPath="/root/INVOICE_NUMBER/"/>
+            <inputMapElement tableName="RECONILIATION_REPORT" columnName="INVOICE_DATE" elementPath="/root/INVOICE_DATE/"/>
+            <inputMapElement tableName="RECONILIATION_REPORT" columnName="GL_NO" elementPath="/root/GL_NO/"/>
+            <inputMapElement tableName="RECONILIATION_REPORT" columnName="CLAIM" elementPath="/root/CLAIM/"/>
+            <inputMapElement tableName="RECONILIATION_REPORT" columnName="DIAGNOSIS" elementPath="/root/DIAGNOSIS/"/>
+            <inputMapElement tableName="RECONILIATION_REPORT" columnName="DETAILS" elementPath="/root/DETAILS/"/>
+            <inputMapElement tableName="RECONILIATION_REPORT" columnName="IMAGE" elementPath="/root/IMAGE/"/>
+            <inputMapElement tableName="RECONILIATION_REPORT" columnName="OVERALL_STATUS" elementPath="/root/OVERALL_STATUS/"/>
+            <inputMapElement tableName="RECONILIATION_REPORT" columnName="PROVIDER_NAME" elementPath="/root/PROVIDER_NAME/"/>
+            <inputMapElement tableName="RECONILIATION_REPORT" columnName="PROVIDER_CODE" elementPath="/root/PROVIDER_CODE/"/>
+         </inputMapElements>
+      </mapping>
+   </mappings>
+</databaseMap>

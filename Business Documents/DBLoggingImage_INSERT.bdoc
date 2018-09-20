@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/databaseBusinessDocument" id="4e6efad2-0f54-4e2a-bc16-84597ba54136" keepDecimalSeparatorCharacter="true" keepDecimalSeparator="true" keepInputNumberFractionDigits="true" keepIntegerPlusSign="true" encodingBD="iso8859" keepInputNumberDateDigits="true" keepPlusSign="true">
+   <signature appVersion="3.1.2" lastUpdatedOn="19/09/2018 18:21:42 +0530"/>
+   <childElements>
+      <childElement factoryType="DatabaseParentElement" order="1" name="root" hash="-642463349">
+         <cardinality minimum="1"/>
+         <childElements>
+            <childElement factoryType="DatabaseLeafElement" hash="-154339364" typeId="10" definition="50" paddingCharElement=" " allowDistortion="true" nullable="true" keepDecimalSeparator="true" order="2" paddingPosElement="3" dbTypeName="string" encodingElement="iso8859" name="CLAIM_FILENAME">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="DatabaseLeafElement" hash="-2093904939" typeId="10" definition="20" paddingCharElement=" " allowDistortion="true" nullable="true" keepDecimalSeparator="true" order="3" paddingPosElement="3" dbTypeName="string" encodingElement="iso8859" name="DATE_TIME_PROCESSED">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="DatabaseLeafElement" hash="317786876" typeId="10" definition="20" paddingCharElement=" " allowDistortion="true" nullable="true" keepDecimalSeparator="true" order="4" paddingPosElement="3" dbTypeName="string" encodingElement="iso8859" name="INVOICE_NUMBER">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="DatabaseLeafElement" hash="273613918" typeId="10" definition="20" paddingCharElement=" " allowDistortion="true" nullable="true" keepDecimalSeparator="true" order="5" paddingPosElement="3" dbTypeName="string" encodingElement="iso8859" name="INVOICE_DATE">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="DatabaseLeafElement" hash="-1949245704" typeId="10" definition="20" paddingCharElement=" " allowDistortion="true" nullable="true" keepDecimalSeparator="true" order="6" paddingPosElement="3" dbTypeName="string" encodingElement="iso8859" name="GL_NO">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="DatabaseLeafElement" hash="1232119748" typeId="10" definition="50" paddingCharElement=" " allowDistortion="true" nullable="true" keepDecimalSeparator="true" order="7" paddingPosElement="3" dbTypeName="string" encodingElement="iso8859" name="CLAIM">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="DatabaseLeafElement" hash="770896109" typeId="10" definition="50" paddingCharElement=" " allowDistortion="true" nullable="true" keepDecimalSeparator="true" order="8" paddingPosElement="3" dbTypeName="string" encodingElement="iso8859" name="DIAGNOSIS">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="DatabaseLeafElement" hash="1955602683" typeId="10" definition="50" paddingCharElement=" " allowDistortion="true" nullable="true" keepDecimalSeparator="true" order="9" paddingPosElement="3" dbTypeName="string" encodingElement="iso8859" name="DETAILS">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="DatabaseLeafElement" hash="427031894" typeId="10" definition="50" paddingCharElement=" " allowDistortion="true" nullable="true" keepDecimalSeparator="true" order="10" paddingPosElement="3" dbTypeName="string" encodingElement="iso8859" name="IMAGE">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="DatabaseLeafElement" hash="-572963090" typeId="10" definition="10" paddingCharElement=" " allowDistortion="true" nullable="true" keepDecimalSeparator="true" order="11" paddingPosElement="3" dbTypeName="string" encodingElement="iso8859" name="OVERALL_STATUS">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="DatabaseLeafElement" hash="-116731379" typeId="10" definition="100" paddingCharElement=" " allowDistortion="true" nullable="true" keepDecimalSeparator="true" order="12" paddingPosElement="3" dbTypeName="string" encodingElement="iso8859" name="PROVIDER_NAME">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="DatabaseLeafElement" hash="762033170" typeId="10" definition="100" paddingCharElement=" " allowDistortion="true" nullable="true" keepDecimalSeparator="true" order="13" paddingPosElement="3" dbTypeName="string" encodingElement="iso8859" name="PROVIDER_CODE">
+               <cardinality maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+   </childElements>
+</businessDocument>

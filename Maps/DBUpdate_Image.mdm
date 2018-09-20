@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseMap xmlns="http://www.axway.com/mappingServices/databaseMap" databaseHost="10.151.14.55" type="UPDATE" databasePort="1521" databaseName="10.151.14.55:1521:orcl" databaseType="Oracle" id="97781085-56eb-4c1f-a7c9-36f24b5a9256">
+   <signature appVersion="3.1.2" lastUpdatedOn="19/09/2018 18:22:57 +0530"/>
+   <outputBusinessDocument/>
+   <expression><![CDATA[update "RECONILIATION_REPORT" set "IMAGE" = #IMAGE# 
+where ("RECONILIATION_REPORT"."INVOICE_NUMBER" = #INVOICE_NUMBER#)]]></expression>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/DBUpdate_Image_UPDATE.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mappings>
+      <mapping endPosition="119">
+         <inputMapElements>
+            <inputMapElement tableName="RECONILIATION_REPORT" columnName="INVOICE_NUMBER" elementPath="/root/INVOICE_NUMBER/"/>
+         </inputMapElements>
+      </mapping>
+   </mappings>
+</databaseMap>

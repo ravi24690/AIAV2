@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="944c4b12-db9b-4d66-ac55-7eda29761c32">
+   <signature appVersion="3.1.2" lastUpdatedOn="19/09/2018 21:14:59 +0530"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/DBLoggingDiagnosis_INSERT.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/Diagnosis.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1863232171" elementPath="/root/">
+         <dmlExpression><![CDATA[1 times]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1487690110" elementPath="/root/INVOICE_NUMBER/">
+         <dmlExpression><![CDATA[in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceNumber]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-135263710" elementPath="/root/DIAGNOSIS/">
+         <dmlExpression><![CDATA[addTrace ( "INFO", "Abhishek" + %flag ) ;
+
+if %flag = 0
+then
+"Failed/Missing mandatory field value"
+else
+"Passed"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1409828143" elementPath="/root/INVOICE_DATE/">
+         <dmlExpression><![CDATA[in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceDate]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>
